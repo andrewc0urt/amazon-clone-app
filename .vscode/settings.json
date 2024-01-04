@@ -1,0 +1,15 @@
+{
+	"emojisense.languages": {
+		"markdown": true,
+		"plaintext": {
+			"markupCompletionsEnabled": false,
+			"emojiDecoratorsEnabled": false
+		},
+		"scminput": true,
+		"git-commit": true
+	},
+	"reactSnippets.settings.prettierEnabled": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true
+}

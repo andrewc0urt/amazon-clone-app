@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
+import Checkout from "./Checkout";
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -13,27 +14,13 @@ function App() {
 		<Router>
 			{/* BEM (naming convention - Block, Element, Modifier) renamed "App" to"app" */}
 			<div className="app">
+				<Header />
 				<Routes>
 					{/* Route for Checkout Page */}
-					<Route
-						path="/checkout"
-						element={
-							//Wrap the multiple elements in a fragment tag
-							<>
-								<Header /> <h1>This is the checkout page!</h1>
-							</>
-						}
-					></Route>
+					<Route path="/checkout" element={<Checkout />}></Route>
 
 					{/* Default Route to Homepage */}
-					<Route
-						path="/"
-						element={
-							<>
-								<Header /> <Home />
-							</>
-						}
-					></Route>
+					<Route path="/" element={<Home />}></Route>
 
 					{/* Wildcard route for handling invalid routes or 404 errors */}
 					<Route path="*" element={<Navigate to="/" />}></Route>

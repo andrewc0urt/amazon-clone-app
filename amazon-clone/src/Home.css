@@ -1,0 +1,25 @@
+.home_container {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-top: auto;
+	max-width: 1500px;
+}
+
+.home_backgroundImage {
+	width: 100%;
+	z-index: -1; /* position this image behind other elements */
+	margin-bottom: -150px;
+
+	/* Apply a mask to the image using a linear gradient.
+   The gradient goes from fully opaque black at the top to fully transparent black at the bottom,
+   creating a fading effect. */
+	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.home_row {
+	display: flex;
+	z-index: 1;
+	margin-left: 5px;
+	margin-right: 5px;
+}

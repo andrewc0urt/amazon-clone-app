@@ -20,6 +20,26 @@ const reducer = (state, action) => {
 				basket: [...state.basket, action.item],
 			};
 
+		case "REMOVE_FROM_CART":
+			const index = state.basket.findIndex(
+				(basketItem) => basketItem.id === action.id
+			);
+
+			let newBasket = [...state.basket];
+
+			if (index >= 0) {
+				newBasket.splice(index, 1);
+			} else {
+				console.warn(
+					`Cannot remove product (id: ${action.id} because it is not in the Shopping Cart.`
+				);
+			}
+
+			return {
+				...state,
+				basket: newBasket,
+			};
+
 		default:
 			return state;
 	}
